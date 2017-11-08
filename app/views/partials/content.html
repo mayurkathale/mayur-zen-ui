@@ -1,0 +1,55 @@
+<div id="this-content" class="container-fluid">
+  <div class="row child-content">
+    <div id="right-content" class="col-lg-3 col-md-3 col-sm-4 right-content">
+      <ul class="nav nav-tabs text-center">
+        <li class="active">
+          <a href="#1" data-toggle="tab">Results</a>
+        </li>
+        <li>
+          <a href="#2" data-toggle="tab">History</a>
+        </li>
+      </ul>
+      <div class="tab-content">
+        <div class="tab-pane active" id="1">
+          <div id="search-list-box" class="left-list" ng-controller="SearchresultCtrl">
+            <ul>
+                <li ng-repeat='twt in list' ng-show="list.length">
+                    <img class="img-rounded" src="{{twt.user.profile_image_url}}"/>&nbsp;&nbsp;{{twt.text}}
+                </li>
+                <li ng-show="!list.length" class="text-center">
+                  No search results.
+                </li>
+            </ul>
+          </div>
+        </div>
+        <div class="tab-pane" id="2">
+          <div id="history-list-box" class="left-list" ng-controller="HistoryCtrl">
+            <ul>
+              <li ng-repeat='obj in history' ng-click="search(obj.field)">{{obj.field}}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-9 col-md-9 col-sm-8 second">
+      <div id="map_canvas" ng-controller="MapCtrl">
+        <ui-gmap-google-map center='map.center' zoom='map.zoom' >
+          <ui-gmap-window
+            show="map.window.show"
+            coords="map.window.model"
+            options="map.window.options"
+            closeClick="map.window.closeClick()"
+            templateUrl="'views/partials/marker.html'"
+            templateParameter="map.window.model">
+          </ui-gmap-window>
+          <ui-gmap-markers models="markersOnMap"
+                           coords="'self'"
+                           icon="'icon'"
+                           events="map.markersEvents"
+                           options="'options'">
+          </ui-gmap-markers>
+        </ui-gmap-google-map>
+      </div>
+    </div>
+  </div>
+</div>

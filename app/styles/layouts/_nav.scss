@@ -1,0 +1,44 @@
+.navbar.navbar-default {
+  background-color: $dark-red;
+  color: $white;
+  .navbar-brand,.navbar-brand:hover {
+    color: $white;
+  }
+  .nav.navbar-nav {
+    li.show-in-phone {
+      display: none;
+    }
+    @media #{$phone} {
+      li.show-in-phone {
+        display: block;
+      }
+    }
+    .nav-element {
+      padding: 15px;
+      .slider-handle.min-slider-handle.round {
+        background-color: $extreme-red;
+        background-image: -webkit-linear-gradient(top, $extreme-red 0%, $border-red 100%);
+        background-image: -o-linear-gradient(top, $extreme-red 0%, $border-red 100%);
+        background-image: linear-gradient(to bottom, $extreme-red 0%, $border-red 100%);
+        background-repeat: repeat-x;
+      }
+    }
+    .form-group {
+      margin: 0px;
+    }
+    input[type="text"] {
+      padding: 1px 6px;
+      color: $gray;
+      @include border-radius(4px);
+    }
+    .nav-user {
+      padding: 4px;
+    }
+  }
+  .nav-tabs {
+    li {
+      width: 50%;
+    }
+  }
+}
+

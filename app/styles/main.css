@@ -1,0 +1,160 @@
+/*
+	TweetOnMap Sass Theme
+	Author: Mayur Kathale
+*/
+/* BASE - Base styles, variables, mixins, etc */
+/* line 1, base/_base.scss */
+html, body {
+  height: 100%;
+}
+
+/* line 5, base/_base.scss */
+input[type="text"] {
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+/* line 10, base/_base.scss */
+#this-content {
+  height: -webkit-calc(100vh - 84px);
+  height: -moz-calc(100vh - 84px);
+  height: calc(100vh - 84px);
+}
+/* line 14, base/_base.scss */
+#this-content .child-content {
+  height: 100%;
+}
+/* line 16, base/_base.scss */
+#this-content .child-content .right-content {
+  height: 100%;
+}
+/* line 18, base/_base.scss */
+#this-content .child-content .right-content .nav-tabs {
+  border-bottom: none;
+}
+/* line 20, base/_base.scss */
+#this-content .child-content .right-content .nav-tabs li {
+  width: 50%;
+}
+/* line 22, base/_base.scss */
+#this-content .child-content .right-content .nav-tabs li a {
+  color: #bc1f36;
+  font-weight: 700;
+}
+/* line 28, base/_base.scss */
+#this-content .child-content .right-content .nav-tabs li.active a {
+  color: #bc1f36;
+  border: 1px solid #bc1f36;
+  border-bottom-color: transparent;
+  font-weight: 400;
+}
+/* line 35, base/_base.scss */
+#this-content .child-content .right-content .nav-tabs li:not(.active) {
+  border: 1px solid #bc1f36;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-left-color: transparent;
+}
+/* line 42, base/_base.scss */
+#this-content .child-content .right-content div.tab-content {
+  border: 1px solid #bc1f36;
+  border-top-color: transparent;
+  height: 92%;
+  overflow-y: scroll;
+}
+/* line 47, base/_base.scss */
+#this-content .child-content .right-content div.tab-content ul {
+  list-style: none;
+  margin-top: 20px;
+  -webkit-padding-start: 0px;
+}
+/* line 51, base/_base.scss */
+#this-content .child-content .right-content div.tab-content ul li {
+  padding: 6px;
+  font-size: 12px;
+}
+/* line 55, base/_base.scss */
+#this-content .child-content .right-content div.tab-content ul li:hover {
+  background-color: #eee;
+}
+/* line 61, base/_base.scss */
+#this-content .child-content .right-content div.tab-content #history-list-box ul li {
+  cursor: pointer;
+}
+/* line 64, base/_base.scss */
+#this-content .child-content .right-content div.tab-content #history-list-box ul li:hover {
+  font-weight: 700;
+}
+
+@media screen and (max-width: 767px) {
+  /* line 75, base/_base.scss */
+  .second {
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+}
+/* MODULES - Individual site components */
+/* LAYOUTS - Page layout styles */
+/* line 1, layouts/_nav.scss */
+.navbar.navbar-default {
+  background-color: #bc1f36;
+  color: #FFFFFF;
+}
+/* line 4, layouts/_nav.scss */
+.navbar.navbar-default .navbar-brand, .navbar.navbar-default .navbar-brand:hover {
+  color: #FFFFFF;
+}
+/* line 8, layouts/_nav.scss */
+.navbar.navbar-default .nav.navbar-nav li.show-in-phone {
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  /* line 12, layouts/_nav.scss */
+  .navbar.navbar-default .nav.navbar-nav li.show-in-phone {
+    display: block;
+  }
+}
+/* line 16, layouts/_nav.scss */
+.navbar.navbar-default .nav.navbar-nav .nav-element {
+  padding: 15px;
+}
+/* line 18, layouts/_nav.scss */
+.navbar.navbar-default .nav.navbar-nav .nav-element .slider-handle.min-slider-handle.round {
+  background-color: #900C3F;
+  background-image: -webkit-linear-gradient(top, #900C3F 0%, #D50C5A 100%);
+  background-image: -o-linear-gradient(top, #900C3F 0%, #D50C5A 100%);
+  background-image: linear-gradient(to bottom, #900C3F 0%, #D50C5A 100%);
+  background-repeat: repeat-x;
+}
+/* line 26, layouts/_nav.scss */
+.navbar.navbar-default .nav.navbar-nav .form-group {
+  margin: 0px;
+}
+/* line 29, layouts/_nav.scss */
+.navbar.navbar-default .nav.navbar-nav input[type="text"] {
+  padding: 1px 6px;
+  color: #898989;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  background-clip: padding-box;
+  /* stops bg color from leaking outside the border: */
+}
+/* line 34, layouts/_nav.scss */
+.navbar.navbar-default .nav.navbar-nav .nav-user {
+  padding: 4px;
+}
+/* line 39, layouts/_nav.scss */
+.navbar.navbar-default .nav-tabs li {
+  width: 50%;
+}
+
+/* line 1, layouts/_map.scss */
+.angular-google-map-container {
+  height: 500px;
+}
+
+/*
+@import 'layouts/_blog.scss';
+@import 'layouts/_mobile.scss';*/
+
+/*# sourceMappingURL=main.css.map */
